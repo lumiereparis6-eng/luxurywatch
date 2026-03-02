@@ -41,7 +41,7 @@
         ↑
     </button>
 
-    <a id="mainWhatsapp" href="https://wa.me/972587858531?text=שלום, אשמח למידע נוסף על שעוני ORLOV PARIS" 
+    <a href="https://wa.me/972587858531?text=שלום, אשמח למידע נוסף על שעוני ORLOV PARIS" 
        target="_blank" 
        class="whatsapp-btn fixed bottom-6 right-6 z-[400] bg-[#25D366] text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-3xl hover:scale-110 transition-transform">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
@@ -81,6 +81,7 @@
             <a href="#collections" onclick="toggleMenu()">קולקציות</a>
             <a href="#bestsellers" onclick="toggleMenu()">שעוני גברים</a>
             <a href="#faq" onclick="toggleMenu()">שאלות נפוצות</a>
+            <a href="#reviews" onclick="toggleMenu()">ביקורות</a>
         </nav>
     </div>
 
@@ -121,9 +122,9 @@
                     <div class="space-y-6 mb-10">
                         <div class="border-b border-white/5 pb-4">
                             <h4 class="text-[#d4af37] text-xs font-bold uppercase tracking-widest mb-2">תיאור הדגם</h4>
-                            <p id="modalDesc" class="text-gray-400 leading-relaxed">שעון יוקרתי מבית ORLOV PARIS בעיצוב נצחי, המשלב פלדת אל-חלד איכותית וזכוכית ספיר נגד שריטות.</p>
+                            <p id="modalDesc" class="text-gray-400 leading-relaxed"></p>
                         </div>
-                        <div class="grid grid-cols-2 gap-4 text-right" dir="rtl">
+                        <div class="grid grid-cols-2 gap-4" dir="rtl">
                             <div class="bg-white/5 p-4 rounded-xl">
                                 <span class="block text-[10px] text-gray-500 uppercase">מנגנון</span>
                                 <span class="font-bold text-sm">Quartz יפני</span>
@@ -144,11 +145,11 @@
 
     <section class="py-20 bg-[#0a0a0a] border-y border-white/5">
         <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-12">
+            <div class="text-center mb-12" data-aos="fade-up">
                 <h2 class="text-3xl font-black italic uppercase mb-2">למה לשלם יותר?</h2>
                 <p class="text-gray-400">השוואה שחוסכת לך אלפי שקלים</p>
             </div>
-            <div class="overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
+            <div class="overflow-hidden rounded-2xl border border-white/10 shadow-2xl" data-aos="zoom-in">
                 <table class="w-full text-right border-collapse">
                     <thead>
                         <tr class="bg-[#111] text-[#d4af37] text-sm uppercase">
@@ -167,12 +168,58 @@
         </div>
     </section>
 
+    <section id="faq" class="py-24 bg-[#050505] text-right border-t border-white/5">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-black italic uppercase mb-4 tracking-tighter">שאלות נפוצות</h2>
+                <div class="w-16 h-1 bg-[#d4af37] mx-auto"></div>
+            </div>
+            <div class="space-y-2">
+                <div class="faq-item" data-aos="fade-up">
+                    <div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>אחריות על המוצר</span><span class="faq-icon text-2xl font-light">+</span></div>
+                    <div class="faq-answer">אחריות מלאה למשך 12 חודשים על המנגנון.</div>
+                </div>
+                <div class="faq-item" data-aos="fade-up">
+                    <div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>מדיניות החזר כספי</span><span class="faq-icon text-2xl font-light">+</span></div>
+                    <div class="faq-answer">החזר כספי מלא עד 14 יום מקבלת המוצר, באריזה מקורית.</div>
+                </div>
+                <div class="faq-item" data-aos="fade-up">
+                    <div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>תוך כמה זמן מגיע המשלוח?</span><span class="faq-icon text-2xl font-light">+</span></div>
+                    <div class="faq-answer">משלוח אקספרס מגיע ללקוח תוך 15 עד 30 ימי עסקים לכל רחבי הארץ.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-24 bg-[#0a0a0a] text-right">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h3 class="text-4xl md:text-5xl font-black italic uppercase mb-16" data-aos="zoom-in">הם כבר עברו ל-ORLOV</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-[#111] p-8 rounded-2xl border border-white/5 text-right" data-aos="fade-up">
+                    <div class="flex items-center gap-1 text-yellow-500 mb-4 justify-end">★★★★★</div>
+                    <p class="text-gray-300 italic">"שעון מטורף. הגיע באריזה יוקרתית עם כל התעודות. מרגיש כמו שעון של 5,000 שקל."</p>
+                    <p class="mt-4 font-bold text-sm">אריאל בן דוד ✅</p>
+                </div>
+                <div class="bg-[#111] p-8 rounded-2xl border border-white/5 text-right" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center gap-1 text-yellow-500 mb-4 justify-end">★★★★★</div>
+                    <p class="text-gray-300 italic">"הזמנתי את ה-Mooner. הצבע של הלוח מדהים והמשקל מרגיש איכותי מאוד."</p>
+                    <p class="mt-4 font-bold text-sm">עידן לוי ✅</p>
+                </div>
+                <div class="bg-[#111] p-8 rounded-2xl border border-white/5 text-right" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center gap-1 text-yellow-500 mb-4 justify-end">★★★★★</div>
+                    <p class="text-gray-300 italic">"שירות לקוחות מעולה בוואטסאפ. עזרו לי לבחור את הדגם וקיבלתי אותו תוך זמן סביר."</p>
+                    <p class="mt-4 font-bold text-sm">מאור גבאי ✅</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="bg-black py-16 border-t border-white/5 text-right">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
                 <h4 class="text-[#d4af37] font-bold uppercase mb-4">פרטי קשר</h4>
-                <p class="text-gray-400 text-sm">שירות לקוחות: א'-ה' | 10:00 - 22:00</p>
-                <p class="text-white font-bold">058-7858531</p>
+                <p class="text-gray-400 text-sm italic">שירות לקוחות: א'-ה' | 10:00 - 22:00</p>
+                <p class="text-white font-bold text-xl">058-7858531</p>
             </div>
             <div class="flex flex-col items-center md:items-start">
                 <div class="luxury-logo flex flex-col items-center md:items-start leading-none mb-4">
@@ -187,31 +234,29 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 1000, once: true });
-        
         function toggleMenu() { document.getElementById('sideMenu').classList.toggle('hidden-menu'); }
+        function toggleFaq(el) { el.parentElement.classList.toggle('active'); }
 
-        // Updated 12 Products Data
         const products = [
-            { id: 1, name: "Mooner", price: 319, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Mooner" },
-            { id: 2, name: "Luner", price: 319, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Luner" },
-            { id: 3, name: "Oldemo", price: 369, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Oldemo" },
-            { id: 4, name: "Leathmoon", price: 319, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Leathmoon" },
-            { id: 5, name: "Starer", price: 339, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Starer" },
-            { id: 6, name: "Luxier", price: 399, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Luxier" },
-            { id: 7, name: "Francer", price: 389, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Francer" },
-            { id: 8, name: "Leathium", price: 309, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Leathium" },
-            { id: 9, name: "Milaner", price: 299, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Milaner" },
-            { id: 10, name: "Mashiner", price: 429, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Mashiner" },
-            { id: 11, name: "Globalo", price: 299, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Globalo" },
-            { id: 12, name: "Time Square", price: 399, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Time+Square" }
+            { id: 1, name: "Mooner", price: 319, desc: "עיצוב כרונוגרף קלאסי בהשראת שעוני הטייסים האיקוניים, עם לוח שחור עמוק.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Mooner" },
+            { id: 2, name: "Luner", price: 319, desc: "מראה נקי ומינימליסטי עם דגש על פונקציונליות ודיוק יפני גבוה.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Luner" },
+            { id: 3, name: "Oldemo", price: 369, desc: "שעון וינטג' מודרני המשלב פלדת אל-חלד מוברשת וזכוכית קמורה.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Oldemo" },
+            { id: 4, name: "Leathmoon", price: 319, desc: "שילוב יוקרתי של רצועת עור איכותית ולוח שעון כהה למראה אלגנטי.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Leathmoon" },
+            { id: 5, name: "Starer", price: 339, desc: "שעון דומיננטי עם מחוגים זרחניים וקריאות מצוינת בכל תנאי תאורה.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Starer" },
+            { id: 6, name: "Luxier", price: 399, desc: "סדרת הפרימיום שלנו. גימור ידני מוקפד ונוכחות מרשימה על פרק היד.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Luxier" },
+            { id: 7, name: "Francer", price: 389, desc: "עיצוב פריזאי קלאסי, דק ויוקרתי המתאים מושלם לחליפות ועסקים.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Francer" },
+            { id: 8, name: "Leathium", price: 309, desc: "שעון קל משקל עם רצועת עור מעובדת לנוחות מקסימלית ביום-יום.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Leathium" },
+            { id: 9, name: "Milaner", price: 299, desc: "רצועת רשת (Mesh) בעיצוב מילאנזי מודרני עם נעילה בטיחותית.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Milaner" },
+            { id: 10, name: "Mashiner", price: 429, desc: "מראה תעשייתי חשוף, שעון חזק במיוחד המיועד לאנשי עבודה ושטח.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Mashiner" },
+            { id: 11, name: "Globalo", price: 299, desc: "שעון ה-Casual האולטימטיבי. פשוט, אמין ומשתלב עם כל בגד.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Globalo" },
+            { id: 12, name: "Time Square", price: 399, desc: "המהדורה המרובעת שלנו. נועז, שונה ומלא בסטייל אירופאי.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Time+Square" }
         ];
 
-        // Render Products
         const grid = document.getElementById('productGrid');
         products.forEach((p, index) => {
             grid.innerHTML += `
                 <div class="product-card bg-[#111] border border-white/5 rounded-2xl p-4 relative group" data-aos="fade-up" onclick="openProduct(${index})">
-                    ${p.id === 1 ? '<div class="absolute top-3 left-3 bg-red-600 text-white text-[9px] font-black px-2 py-1 rounded shadow-lg z-10 animate-pulse">מכירה חמה</div>' : ''}
+                    ${p.id === 1 ? '<div class="absolute top-3 left-3 bg-red-600 text-white text-[9px] font-black px-2 py-1 rounded shadow-lg z-10 animate-pulse">BESTSELLER</div>' : ''}
                     <div class="aspect-square mb-6 overflow-hidden rounded-xl bg-[#1a1a1a]">
                         <img src="${p.img}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                     </div>
@@ -225,6 +270,7 @@
             const p = products[index];
             document.getElementById('modalTitle').innerText = "ORLOV " + p.name;
             document.getElementById('modalPrice').innerText = "₪" + p.price.toFixed(2);
+            document.getElementById('modalDesc').innerText = p.desc;
             document.getElementById('modalImg').src = p.img;
             document.getElementById('modalWaBtn').href = `https://wa.me/972587858531?text=היי, אשמח להזמין את דגם ה-ORLOV ${p.name} שמחירו ₪${p.price}`;
             document.getElementById('productModal').classList.add('active');
@@ -236,14 +282,11 @@
             document.body.style.overflow = 'auto';
         }
 
-        window.onclick = function(event) {
-            if (event.target == document.getElementById('productModal')) closeProduct();
-        };
-
-        const backToTopBtn = document.getElementById('backToTop');
+        window.onclick = function(e) { if (e.target == document.getElementById('productModal')) closeProduct(); };
         window.onscroll = function() {
-            if (document.documentElement.scrollTop > 400) backToTopBtn.classList.add('visible');
-            else backToTopBtn.classList.remove('visible');
+            const btn = document.getElementById('backToTop');
+            if (document.documentElement.scrollTop > 400) btn.classList.add('visible');
+            else btn.classList.remove('visible');
         };
     </script>
 </body>
