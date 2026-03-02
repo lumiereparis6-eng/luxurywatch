@@ -37,7 +37,7 @@
 <body>
 
     <button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
-            class="fixed bottom-6 left-6 z-[400] bg-[#d4af37] text-black w-12 h-12 rounded-full shadow-2xl flex items-center justify-center text-2xl hover:bg-white transition-colors border-2 border-black font-bold">
+            class="fixed bottom-6 left-6 z-[400] bg-[#d4af37] text-black w-12 h-12 rounded-full shadow-2xl flex items-center justify-center text-2xl hover:bg-white transition-colors border-2 border-black">
         ↑
     </button>
 
@@ -104,7 +104,6 @@
             <h2 class="text-4xl font-black mb-4 tracking-tighter uppercase italic">הקולקציה המלאה</h2>
             <div class="w-20 h-1 bg-[#d4af37]"></div>
         </div>
-        
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="productGrid">
             </div>
     </section>
@@ -124,7 +123,7 @@
                             <h4 class="text-[#d4af37] text-xs font-bold uppercase tracking-widest mb-2">תיאור הדגם</h4>
                             <p id="modalDesc" class="text-gray-400 leading-relaxed"></p>
                         </div>
-                        <div class="grid grid-cols-2 gap-4" dir="rtl">
+                        <div class="grid grid-cols-2 gap-4">
                             <div class="bg-white/5 p-4 rounded-xl">
                                 <span class="block text-[10px] text-gray-500 uppercase">מנגנון</span>
                                 <span class="font-bold text-sm">Quartz יפני</span>
@@ -143,31 +142,6 @@
         </div>
     </div>
 
-    <section class="py-20 bg-[#0a0a0a] border-y border-white/5">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-12" data-aos="fade-up">
-                <h2 class="text-3xl font-black italic uppercase mb-2">למה לשלם יותר?</h2>
-                <p class="text-gray-400">השוואה שחוסכת לך אלפי שקלים</p>
-            </div>
-            <div class="overflow-hidden rounded-2xl border border-white/10 shadow-2xl" data-aos="zoom-in">
-                <table class="w-full text-right border-collapse">
-                    <thead>
-                        <tr class="bg-[#111] text-[#d4af37] text-sm uppercase">
-                            <th class="p-4 border-b border-white/10 italic">תכונה</th>
-                            <th class="p-4 border-b border-white/10 text-center">מותגי על</th>
-                            <th class="p-4 border-b border-white/10 text-center bg-[#d4af37]/10">ORLOV PARIS</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-sm">
-                        <tr class="border-b border-white/5"><td class="p-4 font-bold">חומר המארז</td><td class="p-4 text-center text-gray-500">פלדת 316L</td><td class="p-4 text-center font-bold">פלדת 316L</td></tr>
-                        <tr class="border-b border-white/5"><td class="p-4 font-bold">סוג הזכוכית</td><td class="p-4 text-center text-gray-500">ספיר קריסטל</td><td class="p-4 text-center font-bold">ספיר קריסטל</td></tr>
-                        <tr class="border-b border-white/5"><td class="p-4 font-bold">מחיר ממוצע</td><td class="p-4 text-center font-bold">₪4,500+</td><td class="p-4 text-center font-bold text-[#d4af37] text-lg">₪349</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
     <section id="faq" class="py-24 bg-[#050505] text-right border-t border-white/5">
         <div class="max-w-3xl mx-auto px-6">
             <div class="text-center mb-16" data-aos="fade-up">
@@ -175,18 +149,14 @@
                 <div class="w-16 h-1 bg-[#d4af37] mx-auto"></div>
             </div>
             <div class="space-y-2">
-                <div class="faq-item" data-aos="fade-up">
-                    <div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>אחריות על המוצר</span><span class="faq-icon text-2xl font-light">+</span></div>
-                    <div class="faq-answer">אחריות מלאה למשך 12 חודשים על המנגנון.</div>
-                </div>
-                <div class="faq-item" data-aos="fade-up">
-                    <div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>מדיניות החזר כספי</span><span class="faq-icon text-2xl font-light">+</span></div>
-                    <div class="faq-answer">החזר כספי מלא עד 14 יום מקבלת המוצר, באריזה מקורית.</div>
-                </div>
-                <div class="faq-item" data-aos="fade-up">
-                    <div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>תוך כמה זמן מגיע המשלוח?</span><span class="faq-icon text-2xl font-light">+</span></div>
-                    <div class="faq-answer">משלוח אקספרס מגיע ללקוח תוך 15 עד 30 ימי עסקים לכל רחבי הארץ.</div>
-                </div>
+                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>אחריות על המוצר</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">אחריות מלאה למשך 12 חודשים על המנגנון.</div></div>
+                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>מדיניות החזר כספי</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">החזר כספי מלא עד 14 יום מקבלת המוצר, באריזה מקורית.</div></div>
+                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>תוך כמה זמן מגיע המשלוח?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">משלוח אקספרס מגיע ללקוח תוך 15 עד 30 ימי עסקים לכל רחבי הארץ.</div></div>
+                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>האם השעונים עמידים במים?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">כן, רוב השעונים עמידים עד 50 מטר (5ATM), מתאים לשימוש יומיומי ורחצה.</div></div>
+                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>באיזה מנגנון השעון משתמש?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">אנו משתמשים במנגנוני Quartz יפניים מדויקים או מנגנונים אוטומטיים איכותיים בהתאם לדגם שנבחר.</div></div>
+                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>האם ניתן להקטין את הרצועה?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">בוודאי. ניתן להקטין את הרצועה אצל כל שען מקומי בתוך דקות ספורות.</div></div>
+                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>האם האתר מאובטח?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">האתר מאובטח בתקן SSL המחמיר ביותר, ופרטי התשלום אינם נשמרים במערכת שלנו.</div></div>
+                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>האם השעון מגיע עם קופסה?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">בוודאי. כל שעון מגיע במארז היוקרה המקורי שלנו הכולל כרית ומטלית ניקוי.</div></div>
             </div>
         </div>
     </section>
@@ -238,32 +208,30 @@
         function toggleFaq(el) { el.parentElement.classList.toggle('active'); }
 
         const products = [
-            { id: 1, name: "Mooner", price: 319, desc: "עיצוב כרונוגרף קלאסי בהשראת שעוני הטייסים האיקוניים, עם לוח שחור עמוק.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Mooner" },
-            { id: 2, name: "Luner", price: 319, desc: "מראה נקי ומינימליסטי עם דגש על פונקציונליות ודיוק יפני גבוה.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Luner" },
-            { id: 3, name: "Oldemo", price: 369, desc: "שעון וינטג' מודרני המשלב פלדת אל-חלד מוברשת וזכוכית קמורה.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Oldemo" },
-            { id: 4, name: "Leathmoon", price: 319, desc: "שילוב יוקרתי של רצועת עור איכותית ולוח שעון כהה למראה אלגנטי.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Leathmoon" },
-            { id: 5, name: "Starer", price: 339, desc: "שעון דומיננטי עם מחוגים זרחניים וקריאות מצוינת בכל תנאי תאורה.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Starer" },
-            { id: 6, name: "Luxier", price: 399, desc: "סדרת הפרימיום שלנו. גימור ידני מוקפד ונוכחות מרשימה על פרק היד.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Luxier" },
-            { id: 7, name: "Francer", price: 389, desc: "עיצוב פריזאי קלאסי, דק ויוקרתי המתאים מושלם לחליפות ועסקים.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Francer" },
-            { id: 8, name: "Leathium", price: 309, desc: "שעון קל משקל עם רצועת עור מעובדת לנוחות מקסימלית ביום-יום.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Leathium" },
-            { id: 9, name: "Milaner", price: 299, desc: "רצועת רשת (Mesh) בעיצוב מילאנזי מודרני עם נעילה בטיחותית.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Milaner" },
-            { id: 10, name: "Mashiner", price: 429, desc: "מראה תעשייתי חשוף, שעון חזק במיוחד המיועד לאנשי עבודה ושטח.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Mashiner" },
-            { id: 11, name: "Globalo", price: 299, desc: "שעון ה-Casual האולטימטיבי. פשוט, אמין ומשתלב עם כל בגד.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Globalo" },
-            { id: 12, name: "Time Square", price: 399, desc: "המהדורה המרובעת שלנו. נועז, שונה ומלא בסטייל אירופאי.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Time+Square" }
+            { name: "Mooner", price: 319, desc: "עיצוב כרונוגרף קלאסי בהשראת שעוני הטייסים האיקוניים, עם לוח שחור עמוק.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Mooner" },
+            { name: "Luner", price: 319, desc: "מראה נקי ומינימליסטי עם דגש על פונקציונליות ודיוק יפני גבוה.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Luner" },
+            { name: "Oldemo", price: 369, desc: "שעון וינטג' מודרני המשלב פלדת אל-חלד מוברשת וזכוכית קמורה.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Oldemo" },
+            { name: "Leathmoon", price: 319, desc: "שילוב יוקרתי של רצועת עור איכותית ולוח שעון כהה למראה אלגנטי.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Leathmoon" },
+            { name: "Starer", price: 339, desc: "שעון דומיננטי עם מחוגים זרחניים וקריאות מצוינת בכל תנאי תאורה.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Starer" },
+            { name: "Luxier", price: 399, desc: "סדרת הפרימיום שלנו. גימור ידני מוקפד ונוכחות מרשימה על פרק היד.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Luxier" },
+            { name: "Francer", price: 389, desc: "עיצוב פריזאי קלאסי, דק ויוקרתי המתאים מושלם לחליפות ועסקים.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Francer" },
+            { name: "Leathium", price: 309, desc: "שעון קל משקל עם רצועת עור מעובדת לנוחות מקסימלית ביום-יום.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Leathium" },
+            { name: "Milaner", price: 299, desc: "רצועת רשת (Mesh) בעיצוב מילאנזי מודרני עם נעילה בטיחותית.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Milaner" },
+            { name: "Mashiner", price: 429, desc: "מראה תעשייתי חשוף, שעון חזק במיוחד המיועד לאנשי עבודה ושטח.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Mashiner" },
+            { name: "Globalo", price: 299, desc: "שעון ה-Casual האולטימטיבי. פשוט, אמין ומשתלב עם כל בגד.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Globalo" },
+            { name: "Time Square", price: 399, desc: "המהדורה המרובעת שלנו. נועז, שונה ומלא בסטייל אירופאי.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Time+Square" }
         ];
 
         const grid = document.getElementById('productGrid');
         products.forEach((p, index) => {
             grid.innerHTML += `
                 <div class="product-card bg-[#111] border border-white/5 rounded-2xl p-4 relative group" data-aos="fade-up" onclick="openProduct(${index})">
-                    ${p.id === 1 ? '<div class="absolute top-3 left-3 bg-red-600 text-white text-[9px] font-black px-2 py-1 rounded shadow-lg z-10 animate-pulse">BESTSELLER</div>' : ''}
                     <div class="aspect-square mb-6 overflow-hidden rounded-xl bg-[#1a1a1a]">
                         <img src="${p.img}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                     </div>
                     <h3 class="text-center font-bold text-sm mb-2 uppercase tracking-tighter">ORLOV ${p.name}</h3>
                     <div class="flex justify-center items-center gap-2 font-black text-xl mb-4 text-[#d4af37]">₪${p.price.toFixed(2)}</div>
-                </div>
-            `;
+                </div>`;
         });
 
         function openProduct(index) {
@@ -283,11 +251,6 @@
         }
 
         window.onclick = function(e) { if (e.target == document.getElementById('productModal')) closeProduct(); };
-        window.onscroll = function() {
-            const btn = document.getElementById('backToTop');
-            if (document.documentElement.scrollTop > 400) btn.classList.add('visible');
-            else btn.classList.remove('visible');
-        };
     </script>
 </body>
 </html>
