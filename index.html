@@ -70,6 +70,7 @@
             <nav class="hidden md:flex gap-10 text-sm font-bold uppercase tracking-widest text-white/70">
                 <a href="#collections" class="gold-glow transition">קולקציות</a>
                 <a href="#bestsellers" class="gold-glow transition">הנמכרים ביותר</a>
+                <a href="#comparison" class="gold-glow transition">למה ORLOV?</a>
                 <a href="#faq" class="gold-glow transition">שאלות נפוצות</a>
                 <a href="#reviews" class="gold-glow transition text-white">ביקורות ⭐</a>
             </nav>
@@ -82,6 +83,7 @@
         <nav class="flex flex-col gap-8 text-2xl font-bold text-right">
             <a href="#collections" onclick="toggleMenu()">קולקציות</a>
             <a href="#bestsellers" onclick="toggleMenu()">שעוני גברים</a>
+            <a href="#comparison" onclick="toggleMenu()">למה ORLOV?</a>
             <a href="#faq" onclick="toggleMenu()">שאלות נפוצות</a>
             <a href="#reviews" onclick="toggleMenu()">ביקורות</a>
         </nav>
@@ -111,25 +113,6 @@
             </div>
     </section>
 
-    <section id="faq" class="py-24 bg-[#050505] text-right border-t border-white/5">
-        <div class="max-w-3xl mx-auto px-6">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-black italic uppercase mb-4 tracking-tighter">שאלות נפוצות</h2>
-                <div class="w-16 h-1 bg-[#d4af37] mx-auto"></div>
-            </div>
-            <div class="space-y-2">
-                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>אחריות על המוצר</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">אחריות מלאה למשך 12 חודשים על המנגנון.</div></div>
-                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>מדיניות החזר כספי</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">החזר כספי מלא עד 14 יום מקבלת המוצר, באריזה מקורית.</div></div>
-                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>תוך כמה זמן מגיע המשלוח?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">משלוח אקספרס מגיע ללקוח תוך 15 עד 30 ימי עסקים לכל רחבי הארץ.</div></div>
-                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>האם השעונים עמידים במים?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">כן, השעונים עמידים למים לשימוש יומיומי (נטילת ידיים, גשם). לא מומלץ לצלילה עמוקה.</div></div>
-                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>באיזה מנגנון השעון משתמש?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">אנו משתמשים במנגנוני Quartz יפניים מדויקים או מנגנונים אוטומטיים איכותיים בהתאם לדגם שנבחר.</div></div>
-                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>האם ניתן להקטין את הרצועה?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">בוודאי. ניתן להקטין את הרצועה אצל כל שען מקומי בתוך דקות ספורות.</div></div>
-                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>האם האתר מאובטח?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">האתר מאובטח בתקן SSL המחמיר ביותר, ופרטי התשלום אינם נשמרים במערכת שלנו.</div></div>
-                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>האם השעון מגיע עם קופסה?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">בוודאי. כל שעון מגיע במארז היוקרה המקורי שלנו הכולל כרית ומטלית ניקוי.</div></div>
-            </div>
-        </div>
-    </section>
-
     <section id="reviews" class="py-24 bg-[#0a0a0a] text-right">
         <div class="max-w-7xl mx-auto px-6 text-center">
             <h3 class="text-4xl md:text-5xl font-black italic uppercase mb-16" data-aos="zoom-in">הם כבר עברו ל-ORLOV</h3>
@@ -149,6 +132,50 @@
                     <p class="text-gray-300 italic">"שירות לקוחות מעולה בוואטסאפ. עזרו לי לבחור את הדגם וקיבלתי אותו תוך זמן סביר."</p>
                     <p class="mt-4 font-bold text-sm">מאור גבאי ✅</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="comparison" class="py-20 bg-[#0a0a0a] border-y border-white/5">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl font-black italic uppercase mb-2">למה לשלם יותר?</h2>
+                <p class="text-gray-400">השוואה שחוסכת לך אלפי שקלים</p>
+            </div>
+            <div class="overflow-hidden rounded-2xl border border-white/10 shadow-2xl" data-aos="fade-up">
+                <table class="w-full text-right border-collapse">
+                    <thead>
+                        <tr class="bg-[#111] text-[#d4af37] text-sm uppercase">
+                            <th class="p-4 border-b border-white/10 italic">תכונה</th>
+                            <th class="p-4 border-b border-white/10 text-center">מותגי על</th>
+                            <th class="p-4 border-b border-white/10 text-center bg-[#d4af37]/10">ORLOV PARIS</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm">
+                        <tr class="border-b border-white/5"><td class="p-4 font-bold">חומר המארז</td><td class="p-4 text-center text-gray-500">פלדת 316L</td><td class="p-4 text-center font-bold">פלדת 316L</td></tr>
+                        <tr class="border-b border-white/5"><td class="p-4 font-bold">סוג הזכוכית</td><td class="p-4 text-center text-gray-500">ספיר קריסטל</td><td class="p-4 text-center font-bold">ספיר קריסטל</td></tr>
+                        <tr class="border-b border-white/5"><td class="p-4 font-bold">מחיר ממוצע</td><td class="p-4 text-center font-bold">₪4,500+</td><td class="p-4 text-center font-bold text-[#d4af37] text-lg">₪349</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-24 bg-[#050505] text-right">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-black italic uppercase mb-4 tracking-tighter">שאלות נפוצות</h2>
+                <div class="w-16 h-1 bg-[#d4af37] mx-auto"></div>
+            </div>
+            <div class="space-y-2">
+                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>אחריות על המוצר</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">אחריות מלאה למשך 12 חודשים על המנגנון.</div></div>
+                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>מדיניות החזר כספי</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">החזר כספי מלא עד 14 יום מקבלת המוצר, באריזה מקורית.</div></div>
+                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>תוך כמה זמן מגיע המשלוח?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">משלוח אקספרס מגיע ללקוח תוך 15 עד 30 ימי עסקים לכל רחבי הארץ.</div></div>
+                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>האם השעונים עמידים במים?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">כן, השעונים עמידים למים לשימוש יומיומי (נטילת ידיים, גשם). לא מומלץ לצלילה עמוקה.</div></div>
+                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>באיזה מנגנון השעון משתמש?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">אנו משתמשים במנגנוני Quartz יפניים מדויקים או מנגנונים אוטומטיים איכותיים בהתאם לדגם שנבחר.</div></div>
+                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>האם ניתן להקטין את הרצועה?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">בוודאי. ניתן להקטין את הרצועה אצל כל שען מקומי בתוך דקות ספורות.</div></div>
+                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>האם האתר מאובטח?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">האתר מאובטח בתקן SSL המחמיר ביותר, ופרטי התשלום אינם נשמרים במערכת שלנו.</div></div>
+                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>האם השעון מגיע עם קופסה?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">בוודאי. כל שעון מגיע במארז היוקרה המקורי שלנו הכולל כרית ומטלית ניקוי.</div></div>
             </div>
         </div>
     </section>
@@ -186,31 +213,6 @@
             </div>
         </div>
     </div>
-
-    <section class="py-20 bg-[#0a0a0a] border-y border-white/5">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-black italic uppercase mb-2">למה לשלם יותר?</h2>
-                <p class="text-gray-400">השוואה שחוסכת לך אלפי שקלים</p>
-            </div>
-            <div class="overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
-                <table class="w-full text-right border-collapse">
-                    <thead>
-                        <tr class="bg-[#111] text-[#d4af37] text-sm uppercase">
-                            <th class="p-4 border-b border-white/10 italic">תכונה</th>
-                            <th class="p-4 border-b border-white/10 text-center">מותגי על</th>
-                            <th class="p-4 border-b border-white/10 text-center bg-[#d4af37]/10">ORLOV PARIS</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-sm">
-                        <tr class="border-b border-white/5"><td class="p-4 font-bold">חומר המארז</td><td class="p-4 text-center text-gray-500">פלדת 316L</td><td class="p-4 text-center font-bold">פלדת 316L</td></tr>
-                        <tr class="border-b border-white/5"><td class="p-4 font-bold">סוג הזכוכית</td><td class="p-4 text-center text-gray-500">ספיר קריסטל</td><td class="p-4 text-center font-bold">ספיר קריסטל</td></tr>
-                        <tr class="border-b border-white/5"><td class="p-4 font-bold">מחיר ממוצע</td><td class="p-4 text-center font-bold">₪4,500+</td><td class="p-4 text-center font-bold text-[#d4af37] text-lg">₪349</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
 
     <footer class="bg-black py-16 border-t border-white/5 text-right">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
