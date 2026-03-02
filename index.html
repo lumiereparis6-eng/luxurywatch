@@ -24,13 +24,10 @@
         .whatsapp-btn { animation: whatsapp-pulse 2s infinite; }
         .faq-item { border-bottom: 1px solid rgba(255,255,255,0.05); }
         .faq-question { cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; transition: all 0.3s; }
+        .faq-question:hover { color: #d4af37; }
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; color: #9ca3af; font-size: 0.95rem; line-height: 1.6; }
         .faq-item.active .faq-answer { max-height: 300px; padding-bottom: 1.5rem; }
         .faq-item.active .faq-icon { transform: rotate(45deg); color: #d4af37; }
-        
-        /* Table Styles */
-        .comparison-table th, .comparison-table td { border-bottom: 1px solid rgba(255,255,255,0.05); padding: 1rem; text-align: center; }
-        .comparison-table th { color: #d4af37; font-weight: 800; text-transform: uppercase; font-size: 0.75rem; }
 
         #productModal { display: none; }
         #productModal.active { display: flex; animation: fadeIn 0.3s ease; }
@@ -38,6 +35,19 @@
     </style>
 </head>
 <body>
+
+    <button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+            class="fixed bottom-6 left-6 z-[400] bg-[#d4af37] text-black w-12 h-12 rounded-full shadow-2xl flex items-center justify-center text-2xl hover:bg-white transition-colors border-2 border-black font-bold">
+        ↑
+    </button>
+
+    <a id="mainWhatsapp" href="https://wa.me/972587858531?text=שלום, אשמח למידע נוסף על שעוני ORLOV PARIS" 
+       target="_blank" 
+       class="whatsapp-btn fixed bottom-6 right-6 z-[400] bg-[#25D366] text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-3xl hover:scale-110 transition-transform">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93a7.898 7.898 0 0 0-2.322-5.607zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+        </svg>
+    </a>
 
     <div class="bg-[#d4af37] text-black py-2 overflow-hidden sticky top-0 z-[110]">
         <div class="flex justify-around items-center text-[10px] md:text-xs font-black uppercase tracking-widest px-4 whitespace-nowrap">
@@ -57,7 +67,7 @@
             </div>
             <nav class="hidden md:flex gap-10 text-sm font-bold uppercase tracking-widest text-white/70">
                 <a href="#collections" class="gold-glow transition">קולקציות</a>
-                <a href="#comparison" class="gold-glow transition">למה אנחנו?</a>
+                <a href="#bestsellers" class="gold-glow transition">הנמכרים ביותר</a>
                 <a href="#faq" class="gold-glow transition">שאלות נפוצות</a>
                 <a href="#reviews" class="gold-glow transition text-white">ביקורות ⭐</a>
             </nav>
@@ -69,9 +79,8 @@
         <button class="text-4xl mb-10" onclick="toggleMenu()">✕</button>
         <nav class="flex flex-col gap-8 text-2xl font-bold text-right">
             <a href="#collections" onclick="toggleMenu()">קולקציות</a>
-            <a href="#comparison" onclick="toggleMenu()">למה אנחנו?</a>
+            <a href="#bestsellers" onclick="toggleMenu()">שעוני גברים</a>
             <a href="#faq" onclick="toggleMenu()">שאלות נפוצות</a>
-            <a href="#reviews" onclick="toggleMenu()">ביקורות</a>
         </nav>
     </div>
 
@@ -79,7 +88,7 @@
         <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505]/50 z-10"></div>
         <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&q=80&w=1920" 
              class="absolute inset-0 w-full h-full object-cover opacity-60 scale-105" alt="Hero">
-        <div class="relative z-20 text-center px-4" data-aos="fade-up">
+        <div class="relative z-20 text-center px-4" data-aos="fade-up" data-aos-duration="1500">
             <h2 class="luxury-logo text-[#d4af37] mb-4 text-xs md:text-sm italic tracking-[0.4em]">European Excellence</h2>
             <h1 class="text-5xl md:text-8xl font-black mb-6 leading-none italic tracking-tighter">תפסיק לשלם על הלוגו.</h1>
             <p class="text-lg md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
@@ -89,65 +98,17 @@
         </div>
     </section>
 
-    <section id="comparison" class="py-24 bg-[#0a0a0a] border-y border-white/5">
-        <div class="max-w-4xl mx-auto px-6 overflow-x-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-black italic uppercase mb-2 tracking-tighter">ההבדל הברור</h2>
-                <p class="text-gray-500">למה לשלם אלפי שקלים על שם?</p>
-            </div>
-            <table class="w-full comparison-table min-w-[500px]">
-                <thead>
-                    <tr>
-                        <th>מאפיין</th>
-                        <th>מותגי יוקרה (₪5,000+)</th>
-                        <th class="text-white bg-[#d4af37]/10">ORLOV PARIS</th>
-                    </tr>
-                </thead>
-                <tbody class="text-sm">
-                    <tr><td>חומר גוף השעון</td><td>Stainless Steel 316L</td><td class="text-[#d4af37] font-bold">Stainless Steel 316L</td></tr>
-                    <tr><td>זכוכית</td><td>Sapphire Crystal</td><td class="text-[#d4af37] font-bold">Sapphire Crystal</td></tr>
-                    <tr><td>מנגנון</td><td>Swiss/Japanese Quartz</td><td class="text-[#d4af37] font-bold">Japanese Quartz Precision</td></tr>
-                    <tr><td>אריזה</td><td>מארז עץ/עור</td><td class="text-[#d4af37] font-bold">מארז פרימיום מהודר</td></tr>
-                    <tr><td>מחיר</td><td>₪3,500 - ₪12,000</td><td class="text-[#d4af37] font-bold text-xl">₪299 - ₪429</td></tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-
     <section id="bestsellers" class="py-20 px-6 max-w-7xl mx-auto text-right">
         <div class="flex flex-col items-center mb-16 text-center" data-aos="fade-down">
             <h2 class="text-4xl font-black mb-4 tracking-tighter uppercase italic">הקולקציה המלאה</h2>
             <div class="w-20 h-1 bg-[#d4af37]"></div>
         </div>
+        
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="productGrid">
             </div>
     </section>
 
-    <section id="faq" class="py-24 bg-[#050505] text-right border-t border-white/5">
-        <div class="max-w-3xl mx-auto px-6">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-black italic uppercase mb-4 tracking-tighter">שאלות נפוצות</h2>
-                <div class="w-16 h-1 bg-[#d4af37] mx-auto"></div>
-            </div>
-            <div class="space-y-2">
-                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>אחריות על המוצר</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">אחריות מלאה למשך 12 חודשים על המנגנון.</div></div>
-                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>מדיניות החזר כספי</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">החזר כספי מלא עד 14 יום מקבלת המוצר, באריזה מקורית.</div></div>
-                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>תוך כמה זמן מגיע המשלוח?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">משלוח אקספרס מגיע ללקוח תוך 15 עד 30 ימי עסקים לכל רחבי הארץ.</div></div>
-                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>האם השעונים עמידים במים?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">כן, השעונים עמידים למים (Water Resistant). מומלץ להימנע מצלילה עמוקה אך מתאים לחלוטין לשימוש יומיומי.</div></div>
-                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>באיזה מנגנון השעון משתמש?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">אנו משתמשים במנגנוני Quartz יפניים מדויקים או מנגנונים אוטומטיים איכותיים בהתאם לדגם שנבחר.</div></div>
-                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>האם ניתן להקטין את הרצועה?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">בוודאי. ניתן להקטין את הרצועה אצל כל שען מקומי בתוך דקות ספורות.</div></div>
-                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>האם האתר מאובטח?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">האתר מאובטח בתקן SSL המחמיר ביותר, ופרטי התשלום אינם נשמרים במערכת שלנו.</div></div>
-                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>האם השעון מגיע עם קופסה?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">בוודאי. כל שעון מגיע במארז היוקרה המקורי שלנו הכולל כרית ומטלית ניקוי.</div></div>
-            </div>
-        </div>
-    </section>
-
-    <a href="https://wa.me/972587858531?text=שלום, אשמח למידע נוסף על שעוני ORLOV PARIS" target="_blank" class="whatsapp-btn fixed bottom-6 right-6 z-[400] bg-[#25D366] text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-3xl hover:scale-110 transition-transform">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93a7.898 7.898 0 0 0-2.322-5.607zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
-    </a>
-    <button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-6 left-6 z-[400] bg-[#d4af37] text-black w-12 h-12 rounded-full shadow-2xl flex items-center justify-center text-2xl hover:bg-white border-2 border-black">↑</button>
-
-    <div id="productModal" class="fixed inset-0 z-[500] bg-black/95 backdrop-blur-xl items-center justify-center p-4">
+    <div id="productModal" class="fixed inset-0 z-[500] bg-black/95 backdrop-blur-xl items-center justify-center p-4 md:p-8">
         <div class="max-w-6xl w-full bg-[#0a0a0a] border border-white/10 rounded-3xl overflow-hidden relative max-h-[90vh] overflow-y-auto">
             <button onclick="closeProduct()" class="absolute top-6 left-6 text-3xl font-light hover:text-[#d4af37] z-50">✕</button>
             <div class="grid grid-cols-1 md:grid-cols-2">
@@ -157,53 +118,115 @@
                 <div class="p-8 md:p-12 text-right">
                     <h2 id="modalTitle" class="text-3xl md:text-5xl font-black italic mb-4"></h2>
                     <div id="modalPrice" class="text-3xl font-black text-[#d4af37] mb-8"></div>
-                    <p id="modalDesc" class="text-gray-400 leading-relaxed mb-10 border-b border-white/5 pb-6"></p>
-                    <a id="modalWaBtn" href="#" target="_blank" class="block w-full bg-[#d4af37] text-black text-center py-5 font-black uppercase hover:bg-white transition duration-300 rounded-xl text-lg">רכישה מהירה בוואטסאפ</a>
+                    <div class="space-y-6 mb-10">
+                        <div class="border-b border-white/5 pb-4">
+                            <h4 class="text-[#d4af37] text-xs font-bold uppercase tracking-widest mb-2">תיאור הדגם</h4>
+                            <p id="modalDesc" class="text-gray-400 leading-relaxed">שעון יוקרתי מבית ORLOV PARIS בעיצוב נצחי, המשלב פלדת אל-חלד איכותית וזכוכית ספיר נגד שריטות.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 text-right" dir="rtl">
+                            <div class="bg-white/5 p-4 rounded-xl">
+                                <span class="block text-[10px] text-gray-500 uppercase">מנגנון</span>
+                                <span class="font-bold text-sm">Quartz יפני</span>
+                            </div>
+                            <div class="bg-white/5 p-4 rounded-xl">
+                                <span class="block text-[10px] text-gray-500 uppercase">זכוכית</span>
+                                <span class="font-bold text-sm">Sapphire Crystal</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a id="modalWaBtn" href="#" target="_blank" class="block w-full bg-[#d4af37] text-black text-center py-5 font-black uppercase hover:bg-white transition duration-300 rounded-xl text-lg">
+                        רכישה מהירה בוואטסאפ
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 
+    <section class="py-20 bg-[#0a0a0a] border-y border-white/5">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-black italic uppercase mb-2">למה לשלם יותר?</h2>
+                <p class="text-gray-400">השוואה שחוסכת לך אלפי שקלים</p>
+            </div>
+            <div class="overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
+                <table class="w-full text-right border-collapse">
+                    <thead>
+                        <tr class="bg-[#111] text-[#d4af37] text-sm uppercase">
+                            <th class="p-4 border-b border-white/10 italic">תכונה</th>
+                            <th class="p-4 border-b border-white/10 text-center">מותגי על</th>
+                            <th class="p-4 border-b border-white/10 text-center bg-[#d4af37]/10">ORLOV PARIS</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm">
+                        <tr class="border-b border-white/5"><td class="p-4 font-bold">חומר המארז</td><td class="p-4 text-center text-gray-500">פלדת 316L</td><td class="p-4 text-center font-bold">פלדת 316L</td></tr>
+                        <tr class="border-b border-white/5"><td class="p-4 font-bold">סוג הזכוכית</td><td class="p-4 text-center text-gray-500">ספיר קריסטל</td><td class="p-4 text-center font-bold">ספיר קריסטל</td></tr>
+                        <tr class="border-b border-white/5"><td class="p-4 font-bold">מחיר ממוצע</td><td class="p-4 text-center font-bold">₪4,500+</td><td class="p-4 text-center font-bold text-[#d4af37] text-lg">₪349</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-16 border-t border-white/5 text-right">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+                <h4 class="text-[#d4af37] font-bold uppercase mb-4">פרטי קשר</h4>
+                <p class="text-gray-400 text-sm">שירות לקוחות: א'-ה' | 10:00 - 22:00</p>
+                <p class="text-white font-bold">058-7858531</p>
+            </div>
+            <div class="flex flex-col items-center md:items-start">
+                <div class="luxury-logo flex flex-col items-center md:items-start leading-none mb-4">
+                    <span class="text-2xl font-light tracking-[0.2em]">ORLOV</span>
+                    <span class="text-[#d4af37] text-xs font-bold tracking-[0.5em] mt-1 mr-1">PARIS</span>
+                </div>
+                <p class="text-gray-700 text-[9px]">© 2026 ORLOV PARIS</p>
+            </div>
+        </div>
+    </footer>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 1000, once: true });
+        
         function toggleMenu() { document.getElementById('sideMenu').classList.toggle('hidden-menu'); }
-        function toggleFaq(el) { el.parentElement.classList.toggle('active'); }
 
+        // Updated 12 Products Data
         const products = [
-            { name: "Mooner", price: 319, desc: "עיצוב כרונוגרף קלאסי בהשראת שעוני הטייסים האיקוניים.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Mooner" },
-            { name: "Luner", price: 319, desc: "מראה נקי ומינימליסטי עם דגש על פונקציונליות ודיוק יפני.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Luner" },
-            { name: "Oldemo", price: 369, desc: "שעון וינטג' מודרני המשלב פלדת אל-חלד מוברשת.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Oldemo" },
-            { name: "Leathmoon", price: 319, desc: "שילוב יוקרתי של רצועת עור איכותית ולוח שעון כהה.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Leathmoon" },
-            { name: "Starer", price: 339, desc: "שעון דומיננטי עם מחוגים זרחניים וקריאות מצוינת.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Starer" },
-            { name: "Luxier", price: 399, desc: "סדרת הפרימיום שלנו. גימור ידני מוקפד ונוכחות מרשימה.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Luxier" },
-            { name: "Francer", price: 389, desc: "עיצוב פריזאי קלאסי, דק ויוקרתי המתאים לחליפות.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Francer" },
-            { name: "Leathium", price: 309, desc: "שעון קל משקל עם רצועת עור מעובדת לנוחות מקסימלית.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Leathium" },
-            { name: "Milaner", price: 299, desc: "רצועת רשת (Mesh) בעיצוב מילאנזי מודרני.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Milaner" },
-            { name: "Mashiner", price: 429, desc: "מראה תעשייתי חשוף, שעון חזק במיוחד לשטח.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Mashiner" },
-            { name: "Globalo", price: 299, desc: "שעון ה-Casual האולטימטיבי. פשוט ואמין.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Globalo" },
-            { name: "Time Square", price: 399, desc: "המהדורה המרובעת שלנו. נועז ומלא בסטייל.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Time+Square" }
+            { id: 1, name: "Mooner", price: 319, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Mooner" },
+            { id: 2, name: "Luner", price: 319, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Luner" },
+            { id: 3, name: "Oldemo", price: 369, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Oldemo" },
+            { id: 4, name: "Leathmoon", price: 319, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Leathmoon" },
+            { id: 5, name: "Starer", price: 339, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Starer" },
+            { id: 6, name: "Luxier", price: 399, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Luxier" },
+            { id: 7, name: "Francer", price: 389, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Francer" },
+            { id: 8, name: "Leathium", price: 309, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Leathium" },
+            { id: 9, name: "Milaner", price: 299, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Milaner" },
+            { id: 10, name: "Mashiner", price: 429, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Mashiner" },
+            { id: 11, name: "Globalo", price: 299, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Globalo" },
+            { id: 12, name: "Time Square", price: 399, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Time+Square" }
         ];
 
+        // Render Products
         const grid = document.getElementById('productGrid');
         products.forEach((p, index) => {
             grid.innerHTML += `
                 <div class="product-card bg-[#111] border border-white/5 rounded-2xl p-4 relative group" data-aos="fade-up" onclick="openProduct(${index})">
+                    ${p.id === 1 ? '<div class="absolute top-3 left-3 bg-red-600 text-white text-[9px] font-black px-2 py-1 rounded shadow-lg z-10 animate-pulse">מכירה חמה</div>' : ''}
                     <div class="aspect-square mb-6 overflow-hidden rounded-xl bg-[#1a1a1a]">
                         <img src="${p.img}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                     </div>
                     <h3 class="text-center font-bold text-sm mb-2 uppercase tracking-tighter">ORLOV ${p.name}</h3>
                     <div class="flex justify-center items-center gap-2 font-black text-xl mb-4 text-[#d4af37]">₪${p.price.toFixed(2)}</div>
-                </div>`;
+                </div>
+            `;
         });
 
         function openProduct(index) {
             const p = products[index];
             document.getElementById('modalTitle').innerText = "ORLOV " + p.name;
             document.getElementById('modalPrice').innerText = "₪" + p.price.toFixed(2);
-            document.getElementById('modalDesc').innerText = p.desc;
             document.getElementById('modalImg').src = p.img;
-            document.getElementById('modalWaBtn').href = `https://wa.me/972587858531?text=היי, אשמח להזמין את דגם ה-ORLOV ${p.name}`;
+            document.getElementById('modalWaBtn').href = `https://wa.me/972587858531?text=היי, אשמח להזמין את דגם ה-ORLOV ${p.name} שמחירו ₪${p.price}`;
             document.getElementById('productModal').classList.add('active');
             document.body.style.overflow = 'hidden';
         }
@@ -213,9 +236,14 @@
             document.body.style.overflow = 'auto';
         }
 
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('productModal')) closeProduct();
+        };
+
+        const backToTopBtn = document.getElementById('backToTop');
         window.onscroll = function() {
-            if (window.pageYOffset > 300) document.getElementById('backToTop').classList.add('visible');
-            else document.getElementById('backToTop').classList.remove('visible');
+            if (document.documentElement.scrollTop > 400) backToTopBtn.classList.add('visible');
+            else backToTopBtn.classList.remove('visible');
         };
     </script>
 </body>
