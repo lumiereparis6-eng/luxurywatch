@@ -22,6 +22,8 @@
             100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
         .whatsapp-btn { animation: whatsapp-pulse 2s infinite; }
+        
+        /* FAQ Styles */
         .faq-item { border-bottom: 1px solid rgba(255,255,255,0.05); }
         .faq-question { cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; transition: all 0.3s; }
         .faq-question:hover { color: #d4af37; }
@@ -81,6 +83,7 @@
             <a href="#collections" onclick="toggleMenu()">קולקציות</a>
             <a href="#bestsellers" onclick="toggleMenu()">שעוני גברים</a>
             <a href="#faq" onclick="toggleMenu()">שאלות נפוצות</a>
+            <a href="#reviews" onclick="toggleMenu()">ביקורות</a>
         </nav>
     </div>
 
@@ -106,6 +109,48 @@
         
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="productGrid">
             </div>
+    </section>
+
+    <section id="faq" class="py-24 bg-[#050505] text-right border-t border-white/5">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-black italic uppercase mb-4 tracking-tighter">שאלות נפוצות</h2>
+                <div class="w-16 h-1 bg-[#d4af37] mx-auto"></div>
+            </div>
+            <div class="space-y-2">
+                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>אחריות על המוצר</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">אחריות מלאה למשך 12 חודשים על המנגנון.</div></div>
+                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>מדיניות החזר כספי</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">החזר כספי מלא עד 14 יום מקבלת המוצר, באריזה מקורית.</div></div>
+                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>תוך כמה זמן מגיע המשלוח?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">משלוח אקספרס מגיע ללקוח תוך 15 עד 30 ימי עסקים לכל רחבי הארץ.</div></div>
+                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>האם השעונים עמידים במים?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">כן, השעונים עמידים למים לשימוש יומיומי (נטילת ידיים, גשם). לא מומלץ לצלילה עמוקה.</div></div>
+                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>באיזה מנגנון השעון משתמש?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">אנו משתמשים במנגנוני Quartz יפניים מדויקים או מנגנונים אוטומטיים איכותיים בהתאם לדגם שנבחר.</div></div>
+                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>האם ניתן להקטין את הרצועה?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">בוודאי. ניתן להקטין את הרצועה אצל כל שען מקומי בתוך דקות ספורות.</div></div>
+                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>האם האתר מאובטח?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">האתר מאובטח בתקן SSL המחמיר ביותר, ופרטי התשלום אינם נשמרים במערכת שלנו.</div></div>
+                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>האם השעון מגיע עם קופסה?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">בוודאי. כל שעון מגיע במארז היוקרה המקורי שלנו הכולל כרית ומטלית ניקוי.</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-24 bg-[#0a0a0a] text-right">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h3 class="text-4xl md:text-5xl font-black italic uppercase mb-16" data-aos="zoom-in">הם כבר עברו ל-ORLOV</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-[#111] p-8 rounded-2xl border border-white/5 text-right" data-aos="fade-up">
+                    <div class="flex items-center gap-1 text-yellow-500 mb-4 justify-end">★★★★★</div>
+                    <p class="text-gray-300 italic">"שעון מטורף. הגיע באריזה יוקרתית עם כל התעודות. מרגיש כמו שעון של 5,000 שקל."</p>
+                    <p class="mt-4 font-bold text-sm">אריאל בן דוד ✅</p>
+                </div>
+                <div class="bg-[#111] p-8 rounded-2xl border border-white/5 text-right" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center gap-1 text-yellow-500 mb-4 justify-end">★★★★★</div>
+                    <p class="text-gray-300 italic">"הזמנתי את ה-Mooner. הצבע של הלוח מדהים והמשקל מרגיש איכותי מאוד."</p>
+                    <p class="mt-4 font-bold text-sm">עידן לוי ✅</p>
+                </div>
+                <div class="bg-[#111] p-8 rounded-2xl border border-white/5 text-right" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center gap-1 text-yellow-500 mb-4 justify-end">★★★★★</div>
+                    <p class="text-gray-300 italic">"שירות לקוחות מעולה בוואטסאפ. עזרו לי לבחור את הדגם וקיבלתי אותו תוך זמן סביר."</p>
+                    <p class="mt-4 font-bold text-sm">מאור גבאי ✅</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <div id="productModal" class="fixed inset-0 z-[500] bg-black/95 backdrop-blur-xl items-center justify-center p-4 md:p-8">
@@ -189,8 +234,8 @@
         AOS.init({ duration: 1000, once: true });
         
         function toggleMenu() { document.getElementById('sideMenu').classList.toggle('hidden-menu'); }
+        function toggleFaq(el) { el.parentElement.classList.toggle('active'); }
 
-        // Updated 12 Products Data
         const products = [
             { id: 1, name: "Mooner", price: 319, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Mooner" },
             { id: 2, name: "Luner", price: 319, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Luner" },
@@ -206,7 +251,6 @@
             { id: 12, name: "Time Square", price: 399, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Time+Square" }
         ];
 
-        // Render Products
         const grid = document.getElementById('productGrid');
         products.forEach((p, index) => {
             grid.innerHTML += `
