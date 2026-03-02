@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LUMIÈRE PARIS | Luxury Reimagined</title>
+    <title>ORLOV PARIS | Luxury Reimagined</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;400;700;800&family=Playfair+Display:italic,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -29,7 +29,6 @@
         .faq-item.active .faq-answer { max-height: 300px; padding-bottom: 1.5rem; }
         .faq-item.active .faq-icon { transform: rotate(45deg); color: #d4af37; }
 
-        /* Modal Styles */
         #productModal { display: none; }
         #productModal.active { display: flex; animation: fadeIn 0.3s ease; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
@@ -38,11 +37,11 @@
 <body>
 
     <button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
-            class="fixed bottom-6 left-6 z-[400] bg-[#d4af37] text-black w-12 h-12 rounded-full shadow-2xl flex items-center justify-center text-2xl hover:bg-white transition-colors border-2 border-black">
+            class="fixed bottom-6 left-6 z-[400] bg-[#d4af37] text-black w-12 h-12 rounded-full shadow-2xl flex items-center justify-center text-2xl hover:bg-white transition-colors border-2 border-black font-bold">
         ↑
     </button>
 
-    <a href="https://wa.me/972587858531?text=שלום, אשמח למידע נוסף" 
+    <a id="mainWhatsapp" href="https://wa.me/972587858531?text=שלום, אשמח למידע נוסף על שעוני ORLOV PARIS" 
        target="_blank" 
        class="whatsapp-btn fixed bottom-6 right-6 z-[400] bg-[#25D366] text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-3xl hover:scale-110 transition-transform">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
@@ -51,7 +50,7 @@
     </a>
 
     <div class="bg-[#d4af37] text-black py-2 overflow-hidden sticky top-0 z-[110]">
-        <div class="flex justify-around items-center text-[10px] md:text-xs font-black uppercase tracking-widest whitespace-nowrap px-4">
+        <div class="flex justify-around items-center text-[10px] md:text-xs font-black uppercase tracking-widest px-4 whitespace-nowrap">
             <div class="flex items-center gap-2"><span>🚚</span> משלוח אקספרס חינם</div>
             <div class="hidden md:flex items-center gap-2"><span>💎</span> זכוכית ספיר עמידה</div>
             <div class="flex items-center gap-2"><span>🛡️</span> 12 חודשי אחריות</div>
@@ -63,7 +62,7 @@
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <button class="md:hidden text-2xl" onclick="toggleMenu()">☰</button>
             <div class="luxury-logo flex flex-col items-center leading-none">
-                <span class="text-xl md:text-2xl font-light tracking-[0.2em]">LUMIÈRE</span>
+                <span class="text-xl md:text-2xl font-light tracking-[0.2em]">ORLOV</span>
                 <span class="text-[#d4af37] text-[10px] md:text-xs font-bold tracking-[0.5em] mt-1 mr-1">PARIS</span>
             </div>
             <nav class="hidden md:flex gap-10 text-sm font-bold uppercase tracking-widest text-white/70">
@@ -90,7 +89,7 @@
         <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&q=80&w=1920" 
              class="absolute inset-0 w-full h-full object-cover opacity-60 scale-105" alt="Hero">
         <div class="relative z-20 text-center px-4" data-aos="fade-up" data-aos-duration="1500">
-            <h2 class="luxury-logo text-[#d4af37] mb-4 text-xs md:text-sm italic tracking-[0.4em]">World-Class Craftsmanship</h2>
+            <h2 class="luxury-logo text-[#d4af37] mb-4 text-xs md:text-sm italic tracking-[0.4em]">European Excellence</h2>
             <h1 class="text-5xl md:text-8xl font-black mb-6 leading-none italic tracking-tighter">תפסיק לשלם על הלוגו.</h1>
             <p class="text-lg md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
                 אותם חומרים, אותה איכות, מחיר שפוי. <br> <span class="font-bold text-white underline decoration-[#d4af37]">משלוח אקספרס חינם לכל הארץ.</span>
@@ -106,64 +105,12 @@
         </div>
         
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="productGrid">
-            <div class="product-card bg-[#111] border border-white/5 rounded-2xl p-4 relative group" data-aos="fade-up" onclick="openProduct(0)">
-                <div class="absolute top-3 left-3 bg-red-600 text-white text-[9px] font-black px-2 py-1 rounded shadow-lg z-10 animate-pulse">מכירה חמה</div>
-                <div class="aspect-square mb-6 overflow-hidden rounded-xl bg-[#1a1a1a]"><img src="https://placehold.co/600x600/1a1a1a/FFF?text=Monaco+Emerald" class="w-full h-full object-cover group-hover:scale-110 transition duration-500"></div>
-                <h3 class="text-center font-bold text-sm mb-2 uppercase tracking-tighter">LUMIÈRE Monaco Emerald</h3>
-                <div class="flex justify-center items-center gap-2 font-black text-xl mb-4 text-[#d4af37]">₪459.90</div>
             </div>
-            <div class="product-card bg-[#111] border border-white/5 rounded-2xl p-4 relative group" data-aos="fade-up" onclick="openProduct(1)">
-                <div class="aspect-square mb-6 overflow-hidden rounded-xl bg-[#1a1a1a]"><img src="https://placehold.co/600x600/1a1a1a/FFF?text=Saint+Tropez" class="w-full h-full object-cover group-hover:scale-110 transition duration-500"></div>
-                <h3 class="text-center font-bold text-sm mb-2 uppercase tracking-tighter">LUMIÈRE Saint-Tropez Gold</h3>
-                <div class="flex justify-center items-center gap-2 font-black text-xl mb-4 text-[#d4af37]">₪529.90</div>
-            </div>
-            <div class="product-card bg-[#111] border border-white/5 rounded-2xl p-4 relative group" data-aos="fade-up" onclick="openProduct(2)">
-                <div class="aspect-square mb-6 overflow-hidden rounded-xl bg-[#1a1a1a]"><img src="https://placehold.co/600x600/1a1a1a/FFF?text=Obsidian+Black" class="w-full h-full object-cover group-hover:scale-110 transition duration-500"></div>
-                <h3 class="text-center font-bold text-sm mb-2 uppercase tracking-tighter">LUMIÈRE Obsidian Black</h3>
-                <div class="flex justify-center items-center gap-2 font-black text-xl mb-4 text-[#d4af37]">₪949.90</div>
-            </div>
-            <div class="product-card bg-[#111] border border-white/5 rounded-2xl p-4 relative group" data-aos="fade-up" onclick="openProduct(3)">
-                <div class="aspect-square mb-6 overflow-hidden rounded-xl bg-[#1a1a1a]"><img src="https://placehold.co/600x600/1a1a1a/FFF?text=Royal+Azure" class="w-full h-full object-cover group-hover:scale-110 transition duration-500"></div>
-                <h3 class="text-center font-bold text-sm mb-2 uppercase tracking-tighter">LUMIÈRE Royal Azure</h3>
-                <div class="flex justify-center items-center gap-2 font-black text-xl mb-4 text-[#d4af37]">₪489.90</div>
-            </div>
-            <div class="product-card bg-[#111] border border-white/5 rounded-2xl p-4 relative group" data-aos="fade-up" onclick="openProduct(4)">
-                <div class="aspect-square mb-6 overflow-hidden rounded-xl bg-[#1a1a1a]"><img src="https://placehold.co/600x600/1a1a1a/FFF?text=Silver+Ghost" class="w-full h-full object-cover group-hover:scale-110 transition duration-500"></div>
-                <h3 class="text-center font-bold text-sm mb-2 uppercase tracking-tighter">Silver Ghost Edition</h3>
-                <div class="flex justify-center items-center gap-2 font-black text-xl mb-4 text-[#d4af37]">₪599.90</div>
-            </div>
-            <div class="product-card bg-[#111] border border-white/5 rounded-2xl p-4 relative group" data-aos="fade-up" onclick="openProduct(5)">
-                <div class="aspect-square mb-6 overflow-hidden rounded-xl bg-[#1a1a1a]"><img src="https://placehold.co/600x600/1a1a1a/FFF?text=Carbon+Master" class="w-full h-full object-cover group-hover:scale-110 transition duration-500"></div>
-                <h3 class="text-center font-bold text-sm mb-2 uppercase tracking-tighter">Carbon Master Pro</h3>
-                <div class="flex justify-center items-center gap-2 font-black text-xl mb-4 text-[#d4af37]">₪649.90</div>
-            </div>
-            <div class="product-card bg-[#111] border border-white/5 rounded-2xl p-4 relative group" data-aos="fade-up" onclick="openProduct(6)">
-                <div class="aspect-square mb-6 overflow-hidden rounded-xl bg-[#1a1a1a]"><img src="https://placehold.co/600x600/1a1a1a/FFF?text=Executive+II" class="w-full h-full object-cover group-hover:scale-110 transition duration-500"></div>
-                <h3 class="text-center font-bold text-sm mb-2 uppercase tracking-tighter">The Executive II</h3>
-                <div class="flex justify-center items-center gap-2 font-black text-xl mb-4 text-[#d4af37]">₪720.00</div>
-            </div>
-            <div class="product-card bg-[#111] border border-white/5 rounded-2xl p-4 relative group" data-aos="fade-up" onclick="openProduct(7)">
-                <div class="aspect-square mb-6 overflow-hidden rounded-xl bg-[#1a1a1a]"><img src="https://placehold.co/600x600/1a1a1a/FFF?text=Midnight+Blue" class="w-full h-full object-cover group-hover:scale-110 transition duration-500"></div>
-                <h3 class="text-center font-bold text-sm mb-2 uppercase tracking-tighter">Midnight Blue Diver</h3>
-                <div class="flex justify-center items-center gap-2 font-black text-xl mb-4 text-[#d4af37]">₪499.90</div>
-            </div>
-            <div class="product-card bg-[#111] border border-white/5 rounded-2xl p-4 relative group" data-aos="fade-up" onclick="openProduct(8)">
-                <div class="aspect-square mb-6 overflow-hidden rounded-xl bg-[#1a1a1a]"><img src="https://placehold.co/600x600/1a1a1a/FFF?text=Aviation+Gold" class="w-full h-full object-cover group-hover:scale-110 transition duration-500"></div>
-                <h3 class="text-center font-bold text-sm mb-2 uppercase tracking-tighter">Aviation Gold Edition</h3>
-                <div class="flex justify-center items-center gap-2 font-black text-xl mb-4 text-[#d4af37]">₪880.00</div>
-            </div>
-            <div class="product-card bg-[#111] border border-white/5 rounded-2xl p-4 relative group" data-aos="fade-up" onclick="openProduct(9)">
-                <div class="aspect-square mb-6 overflow-hidden rounded-xl bg-[#1a1a1a]"><img src="https://placehold.co/600x600/1a1a1a/FFF?text=Grand+Skeleton" class="w-full h-full object-cover group-hover:scale-110 transition duration-500"></div>
-                <h3 class="text-center font-bold text-sm mb-2 uppercase tracking-tighter">Grand Skeleton Tourbillon</h3>
-                <div class="flex justify-center items-center gap-2 font-black text-xl mb-4 text-[#d4af37]">₪1,100.00</div>
-            </div>
-        </div>
     </section>
 
     <div id="productModal" class="fixed inset-0 z-[500] bg-black/95 backdrop-blur-xl items-center justify-center p-4 md:p-8">
         <div class="max-w-6xl w-full bg-[#0a0a0a] border border-white/10 rounded-3xl overflow-hidden relative max-h-[90vh] overflow-y-auto">
             <button onclick="closeProduct()" class="absolute top-6 left-6 text-3xl font-light hover:text-[#d4af37] z-50">✕</button>
-            
             <div class="grid grid-cols-1 md:grid-cols-2">
                 <div class="p-8 bg-[#111] flex items-center justify-center">
                     <img id="modalImg" src="" class="w-full h-auto rounded-2xl shadow-2xl">
@@ -171,13 +118,12 @@
                 <div class="p-8 md:p-12 text-right">
                     <h2 id="modalTitle" class="text-3xl md:text-5xl font-black italic mb-4"></h2>
                     <div id="modalPrice" class="text-3xl font-black text-[#d4af37] mb-8"></div>
-                    
                     <div class="space-y-6 mb-10">
                         <div class="border-b border-white/5 pb-4">
                             <h4 class="text-[#d4af37] text-xs font-bold uppercase tracking-widest mb-2">תיאור הדגם</h4>
-                            <p id="modalDesc" class="text-gray-400 leading-relaxed"></p>
+                            <p id="modalDesc" class="text-gray-400 leading-relaxed">שעון יוקרתי מבית ORLOV PARIS בעיצוב נצחי, המשלב פלדת אל-חלד איכותית וזכוכית ספיר נגד שריטות.</p>
                         </div>
-                        <div class="grid grid-cols-2 gap-4">
+                        <div class="grid grid-cols-2 gap-4 text-right" dir="rtl">
                             <div class="bg-white/5 p-4 rounded-xl">
                                 <span class="block text-[10px] text-gray-500 uppercase">מנגנון</span>
                                 <span class="font-bold text-sm">Quartz יפני</span>
@@ -188,11 +134,9 @@
                             </div>
                         </div>
                     </div>
-
                     <a id="modalWaBtn" href="#" target="_blank" class="block w-full bg-[#d4af37] text-black text-center py-5 font-black uppercase hover:bg-white transition duration-300 rounded-xl text-lg">
                         רכישה מהירה בוואטסאפ
                     </a>
-                    <p class="text-center text-gray-500 text-xs mt-4 italic">משלוח אקספרס חינם + מארז יוקרה כלול</p>
                 </div>
             </div>
         </div>
@@ -200,67 +144,25 @@
 
     <section class="py-20 bg-[#0a0a0a] border-y border-white/5">
         <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-12" data-aos="fade-up">
+            <div class="text-center mb-12">
                 <h2 class="text-3xl font-black italic uppercase mb-2">למה לשלם יותר?</h2>
                 <p class="text-gray-400">השוואה שחוסכת לך אלפי שקלים</p>
             </div>
-            <div class="overflow-hidden rounded-2xl border border-white/10 shadow-2xl" data-aos="zoom-in">
+            <div class="overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
                 <table class="w-full text-right border-collapse">
                     <thead>
                         <tr class="bg-[#111] text-[#d4af37] text-sm uppercase">
                             <th class="p-4 border-b border-white/10 italic">תכונה</th>
                             <th class="p-4 border-b border-white/10 text-center">מותגי על</th>
-                            <th class="p-4 border-b border-white/10 text-center bg-[#d4af37]/10">LUMIÈRE PARIS</th>
+                            <th class="p-4 border-b border-white/10 text-center bg-[#d4af37]/10">ORLOV PARIS</th>
                         </tr>
                     </thead>
                     <tbody class="text-sm">
-                        <tr class="border-b border-white/5 hover:bg-white/5 transition"><td class="p-4 font-bold">חומר המארז</td><td class="p-4 text-center text-gray-500 text-xs">פלדת אל-חלד 316L</td><td class="p-4 text-center font-bold bg-[#d4af37]/5">פלדת אל-חלד 316L</td></tr>
-                        <tr class="border-b border-white/5 hover:bg-white/5 transition"><td class="p-4 font-bold">סוג הזכוכית</td><td class="p-4 text-center text-gray-500 text-xs">ספיר קריסטל</td><td class="p-4 text-center font-bold bg-[#d4af37]/5">ספיר קריסטל</td></tr>
-                        <tr class="border-b border-white/5 hover:bg-white/5 transition"><td class="p-4 font-bold text-white">מחיר ממוצע</td><td class="p-4 text-center font-bold">₪4,500+</td><td class="p-4 text-center font-bold bg-[#d4af37]/20 text-[#d4af37] text-lg italic">₪499</td></tr>
+                        <tr class="border-b border-white/5"><td class="p-4 font-bold">חומר המארז</td><td class="p-4 text-center text-gray-500">פלדת 316L</td><td class="p-4 text-center font-bold">פלדת 316L</td></tr>
+                        <tr class="border-b border-white/5"><td class="p-4 font-bold">סוג הזכוכית</td><td class="p-4 text-center text-gray-500">ספיר קריסטל</td><td class="p-4 text-center font-bold">ספיר קריסטל</td></tr>
+                        <tr class="border-b border-white/5"><td class="p-4 font-bold">מחיר ממוצע</td><td class="p-4 text-center font-bold">₪4,500+</td><td class="p-4 text-center font-bold text-[#d4af37] text-lg">₪349</td></tr>
                     </tbody>
                 </table>
-            </div>
-        </div>
-    </section>
-
-    <section id="faq" class="py-24 bg-[#050505] text-right border-t border-white/5">
-        <div class="max-w-3xl mx-auto px-6">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-black italic uppercase mb-4 tracking-tighter">שאלות נפוצות</h2>
-                <div class="w-16 h-1 bg-[#d4af37] mx-auto"></div>
-            </div>
-            <div class="space-y-2">
-                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>אחריות על המוצר</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">אחריות מלאה למשך 12 חודשים על המנגנון.</div></div>
-                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>מדיניות החזר כספי</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">החזר כספי מלא עד 14 יום מקבלת המוצר, באריזה מקורית.</div></div>
-                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>תוך כמה זמן מגיע המשלוח?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">משלוח אקספרס מגיע ללקוח תוך 15 עד 30 ימי עסקים לכל רחבי הארץ.</div></div>
-                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>האם השעונים עמידים במים?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">כן, רוב השעונים עמידים עד 50 מטר (5ATM), מתאים לשימוש יומיומי ורחצה.</div></div>
-                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>באיזה מנגנון השעון משתמש?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">אנו משתמשים במנגנוני Quartz יפניים מדויקים או מנגנונים אוטומטיים איכותיים בהתאם לדגם שנבחר.</div></div>
-                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>האם ניתן להקטין את הרצועה?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">בוודאי. ניתן להקטין את הרצועה אצל כל שען מקומי בתוך דקות ספורות.</div></div>
-                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>האם האתר מאובטח?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">האתר מאובטח בתקן SSL המחמיר ביותר, ופרטי התשלום אינם נשמרים במערכת שלנו.</div></div>
-                <div class="faq-item" data-aos="fade-up"><div class="faq-question text-lg font-bold" onclick="toggleFaq(this)"><span>האם השעון מגיע עם קופסה?</span><span class="faq-icon text-2xl font-light">+</span></div><div class="faq-answer">בוודאי. כל שעון מגיע במארז היוקרה המקורי שלנו הכולל כרית ומטלית ניקוי.</div></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="reviews" class="py-24 bg-[#0a0a0a] text-right">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h3 class="text-4xl md:text-5xl font-black italic uppercase mb-16" data-aos="zoom-in">הם כבר עברו ל-LUMIÈRE</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-[#111] p-8 rounded-2xl border border-white/5 text-right" data-aos="fade-up">
-                    <div class="flex items-center gap-1 text-yellow-500 mb-4 justify-end">★★★★★</div>
-                    <p class="text-gray-300 italic">"שעון מטורף. הגיע באריזה יוקרתית עם כל התעודות. מרגיש כמו שעון של 5,000 שקל."</p>
-                    <p class="mt-4 font-bold text-sm">אריאל בן דוד ✅</p>
-                </div>
-                <div class="bg-[#111] p-8 rounded-2xl border border-white/5 text-right" data-aos="fade-up" data-aos-delay="100">
-                    <div class="flex items-center gap-1 text-yellow-500 mb-4 justify-end">★★★★★</div>
-                    <p class="text-gray-300 italic">"הזמנתי את ה-Monaco Emerald. הצבע של הלוח מדהים והמשקל מרגיש איכותי מאוד."</p>
-                    <p class="mt-4 font-bold text-sm">עידן לוי ✅</p>
-                </div>
-                <div class="bg-[#111] p-8 rounded-2xl border border-white/5 text-right" data-aos="fade-up" data-aos-delay="200">
-                    <div class="flex items-center gap-1 text-yellow-500 mb-4 justify-end">★★★★★</div>
-                    <p class="text-gray-300 italic">"שירות לקוחות מעולה בוואטסאפ. עזרו לי לבחור את הדגם וקיבלתי אותו תוך זמן סביר מאוד."</p>
-                    <p class="mt-4 font-bold text-sm">מאור גבאי ✅</p>
-                </div>
             </div>
         </div>
     </section>
@@ -274,10 +176,10 @@
             </div>
             <div class="flex flex-col items-center md:items-start">
                 <div class="luxury-logo flex flex-col items-center md:items-start leading-none mb-4">
-                    <span class="text-2xl font-light tracking-[0.2em]">LUMIÈRE</span>
+                    <span class="text-2xl font-light tracking-[0.2em]">ORLOV</span>
                     <span class="text-[#d4af37] text-xs font-bold tracking-[0.5em] mt-1 mr-1">PARIS</span>
                 </div>
-                <p class="text-gray-700 text-[9px]">© 2026 LUMIÈRE PARIS</p>
+                <p class="text-gray-700 text-[9px]">© 2026 ORLOV PARIS</p>
             </div>
         </div>
     </footer>
@@ -287,38 +189,46 @@
         AOS.init({ duration: 1000, once: true });
         
         function toggleMenu() { document.getElementById('sideMenu').classList.toggle('hidden-menu'); }
-        function toggleFaq(element) { element.parentElement.classList.toggle('active'); }
-        
-        const backToTopBtn = document.getElementById('backToTop');
-        window.onscroll = function() {
-            if (document.documentElement.scrollTop > 400) backToTopBtn.classList.add('visible');
-            else backToTopBtn.classList.remove('visible');
-        };
 
-        // Product Data & Modal Logic
+        // Updated 12 Products Data
         const products = [
-            { title: "Monaco Emerald", price: "₪459.90", desc: "שעון כרונוגרף יוקרתי עם לוח ירוק עמוק ורצועת פלדה מוברשת. משלב אלגנטיות ספורטיבית עם דיוק יפני חסר פשרות.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Monaco+Emerald" },
-            { title: "Saint-Tropez Gold", price: "₪529.90", desc: "הזהב של הריביירה הצרפתית אצלך על פרק היד. ציפוי זהב 18K עמיד וזכוכית ספיר נגד שריטות.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Saint+Tropez" },
-            { title: "Obsidian Black", price: "₪949.90", desc: "הדגם השחור המוחלט. פלדה מושחרת בטכנולוגיית PVD ומנגנון אוטומטי גלוי בגב השעון.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Obsidian+Black" },
-            { title: "Royal Azure", price: "₪489.90", desc: "כחול מלכותי המשתנה עם השמש. שעון מושלם לאירועים רשמיים וליום יום במשרד.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Royal+Azure" },
-            { title: "Silver Ghost Edition", price: "₪599.90", desc: "מהדורה מוגבלת בעיצוב מינימליסטי. פלדת אל-חלד מבריקה למראה נקי וחד.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Silver+Ghost" },
-            { title: "Carbon Master Pro", price: "₪649.90", desc: "שעון קשיח עם לוח דמוי סיבי פחמן. עמידות משופרת לזעזועים ולתנאי שטח.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Carbon+Master" },
-            { title: "The Executive II", price: "₪720.00", desc: "הבחירה של המנכ״לים. עיצוב קלאסי נצחי עם תאריכון מוגדל ורצועת חוליות יוקרתית.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Executive+II" },
-            { title: "Midnight Blue Diver", price: "₪499.90", desc: "שעון צלילה עמיד למים (5ATM) עם בזל מסתובב ולוח זרחני לקריאה בחושך.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Midnight+Blue" },
-            { title: "Aviation Gold Edition", price: "₪880.00", desc: "שעון טייסים עם לוח עשיר בפרטים. מראה דומיננטי ויוקרתי שאי אפשר להתעלם ממנו.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Aviation+Gold" },
-            { title: "Grand Skeleton", price: "₪1,100.00", desc: "יצירת אמנות מכנית. מנגנון גלוי לחלוטין (Skeleton) המאפשר לראות כל תנועה ובורג בפעולה.", img: "https://placehold.co/600x600/1a1a1a/FFF?text=Grand+Skeleton" }
+            { id: 1, name: "Mooner", price: 319, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Mooner" },
+            { id: 2, name: "Luner", price: 319, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Luner" },
+            { id: 3, name: "Oldemo", price: 369, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Oldemo" },
+            { id: 4, name: "Leathmoon", price: 319, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Leathmoon" },
+            { id: 5, name: "Starer", price: 339, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Starer" },
+            { id: 6, name: "Luxier", price: 399, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Luxier" },
+            { id: 7, name: "Francer", price: 389, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Francer" },
+            { id: 8, name: "Leathium", price: 309, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Leathium" },
+            { id: 9, name: "Milaner", price: 299, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Milaner" },
+            { id: 10, name: "Mashiner", price: 429, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Mashiner" },
+            { id: 11, name: "Globalo", price: 299, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Globalo" },
+            { id: 12, name: "Time Square", price: 399, img: "https://placehold.co/600x600/1a1a1a/FFF?text=Time+Square" }
         ];
+
+        // Render Products
+        const grid = document.getElementById('productGrid');
+        products.forEach((p, index) => {
+            grid.innerHTML += `
+                <div class="product-card bg-[#111] border border-white/5 rounded-2xl p-4 relative group" data-aos="fade-up" onclick="openProduct(${index})">
+                    ${p.id === 1 ? '<div class="absolute top-3 left-3 bg-red-600 text-white text-[9px] font-black px-2 py-1 rounded shadow-lg z-10 animate-pulse">מכירה חמה</div>' : ''}
+                    <div class="aspect-square mb-6 overflow-hidden rounded-xl bg-[#1a1a1a]">
+                        <img src="${p.img}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <h3 class="text-center font-bold text-sm mb-2 uppercase tracking-tighter">ORLOV ${p.name}</h3>
+                    <div class="flex justify-center items-center gap-2 font-black text-xl mb-4 text-[#d4af37]">₪${p.price.toFixed(2)}</div>
+                </div>
+            `;
+        });
 
         function openProduct(index) {
             const p = products[index];
-            document.getElementById('modalTitle').innerText = "LUMIÈRE " + p.title;
-            document.getElementById('modalPrice').innerText = p.price;
-            document.getElementById('modalDesc').innerText = p.desc;
+            document.getElementById('modalTitle').innerText = "ORLOV " + p.name;
+            document.getElementById('modalPrice').innerText = "₪" + p.price.toFixed(2);
             document.getElementById('modalImg').src = p.img;
-            document.getElementById('modalWaBtn').href = `https://wa.me/972587858531?text=היי, אשמח להזמין את דגם ה-${p.title} שמחירו ${p.price}`;
-            
+            document.getElementById('modalWaBtn').href = `https://wa.me/972587858531?text=היי, אשמח להזמין את דגם ה-ORLOV ${p.name} שמחירו ₪${p.price}`;
             document.getElementById('productModal').classList.add('active');
-            document.body.style.overflow = 'hidden'; // מונע גלילה ברקע
+            document.body.style.overflow = 'hidden';
         }
 
         function closeProduct() {
@@ -326,11 +236,15 @@
             document.body.style.overflow = 'auto';
         }
 
-        // סגירה בלחיצה מחוץ למודאל
         window.onclick = function(event) {
-            const modal = document.getElementById('productModal');
-            if (event.target == modal) closeProduct();
-        }
+            if (event.target == document.getElementById('productModal')) closeProduct();
+        };
+
+        const backToTopBtn = document.getElementById('backToTop');
+        window.onscroll = function() {
+            if (document.documentElement.scrollTop > 400) backToTopBtn.classList.add('visible');
+            else backToTopBtn.classList.remove('visible');
+        };
     </script>
 </body>
 </html>
